@@ -7,7 +7,7 @@ const MongoClient = require('mongodb').MongoClient
 app.use(cors())
 
 // Server port
-const port = process.env.PORT || 80
+const port = process.env.PORT || 8080
 
 // Database configs
 const DB = 'mongodb://mongo/myproject?retryWrites=true&w=majority' // TODO for cloud

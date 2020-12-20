@@ -5,7 +5,7 @@ function App() {
   const [count, setCount] = React.useState(0)
 
   React.useEffect(() => {
-    fetch('http://localhost:80')
+    fetch('http://localhost:8080')
       .then((res) => res.json())
       .then(
         (result) => {
@@ -19,7 +19,7 @@ function App() {
   }, [])
 
   const updateDB = () => {
-    fetch('http://localhost:80/update')
+    fetch('http://localhost:8080/update')
       .then((res) => res.json())
       .then(
         (result) => {
