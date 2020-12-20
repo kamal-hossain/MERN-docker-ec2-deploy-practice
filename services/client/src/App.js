@@ -34,13 +34,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1>This is a react app</h1>
-      {count && (
-        <>
-          <h1>Count value from mongoDB = {count}</h1>
-          <button onClick={updateDB}>Update db</button>
-        </>
-      )}
+      <h1>This is a react app haha</h1>
+
+      <h1>Count value from mongoDB = {count}</h1>
+      <button onClick={updateDB}>Update db</button>
     </div>
   )
 }
