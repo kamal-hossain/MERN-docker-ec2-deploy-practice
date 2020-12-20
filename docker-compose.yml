@@ -9,6 +9,7 @@ services:
     build:
       context: ./services/client
       dockerfile: Dockerfile
+    image: kamalhossain/react-counter-app-client
     restart: always
     ports:
       - "80:80"
@@ -24,6 +25,7 @@ services:
     build:
       context: ./services/api
       dockerfile: Dockerfile
+    image: kamalhossain/react-counter-app-server
     restart: always
     container_name: 'backend'
     depends_on:
