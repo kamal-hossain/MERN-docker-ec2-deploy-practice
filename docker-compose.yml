@@ -1,0 +1,48 @@
+version: '3.4'
+services:
+  
+  ##############################################################################
+  # React app
+  ##############################################################################
+  
+  client:
+    build:
+      context: ./services/client
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - /usr/src/app/node_modules
+      - ./services/client:/usr/src/app
+      
+  ##############################################################################
+  # Nodejs backend
+  ##############################################################################
+  
+  backend:
+    build:
+      context: ./services/api
+      dockerfile: Dockerfile
+    restart: always
+    container_name: 'backend'
+    depends_on:
+      - mongo
+    ports:
+      - "80:80"
+    volumes:
+      - /usr/src/nodejs/node_modules
+      - ./services/api:/usr/src/nodejs
+  
+  ##############################################################################
+  # Databases
+  ##############################################################################
+  
+  mongo: # Needed for express api
+    image: "mongo"
+    container_name: 'mongo'
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - "./data/mongo:/data/db"
