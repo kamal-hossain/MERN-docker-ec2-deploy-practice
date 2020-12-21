@@ -94,6 +94,10 @@ Confirm it by
 ```
 sudo docker ps
 ```
+Stop the containers
+```
+sudo docker-compose down
+```
 
 To access the app from browser do the followings:
 
