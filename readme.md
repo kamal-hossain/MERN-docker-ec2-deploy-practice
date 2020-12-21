@@ -1,4 +1,6 @@
-# `Click Counter app` to dockerize and deploy to AWS EC2 ubuntu instance
+# Dockerized `Click Counter app` app to deploy at AWS EC2 ubuntu instance
+
+> Get the source code [here](https://github.com/kamal-hossain/MERN-docker-ec2-deploy-practice)
 
 ### Stack 
 - React 
@@ -104,6 +106,5 @@ To access the app from browser do the followings:
 - Select the instance in AWS EC2
 - Copy the `Public IPv4 address` from Details
 - Open it on browser
+
 > You can't access the IP if `All traffic` is not enabled in `Security group` from anywhere. (Or simillar settings)
-
-
